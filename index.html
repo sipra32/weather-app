@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="weather-app">
+
+        <header>
+            <p class="subtitle">REAL-TIME WEATHER</p>
+            <h1>Weather Dashboard</h1>
+            <p>Search for a city to see its current weather.</p>
+        </header>
+
+        <form id="weather-form">
+            <label for="city">Enter city name</label>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="city"
+                    placeholder="e.g. Bhubaneswar"
+                    required
+                >
+
+                <button type="submit">Search</button>
+            </div>
+        </form>
+
+        <p id="loading" class="status" hidden>
+            Loading weather...
+        </p>
+
+        <p id="error" class="error" role="alert"></p>
+
+        <section id="weather-card" class="weather-card" hidden>
+
+            <div class="weather-header">
+                <div>
+                    <h2 id="city-name"></h2>
+                    <p id="weather-description"></p>
+                </div>
+
+                <div class="temperature">
+                    <span id="temperature"></span>°C
+                </div>
+            </div>
+
+            <div class="weather-details">
+
+                <div>
+                    <span>💨</span>
+                    <strong>Wind</strong>
+                    <p id="wind"></p>
+                </div>
+
+                <div>
+                    <span>💧</span>
+                    <strong>Humidity</strong>
+                    <p id="humidity"></p>
+                </div>
+
+                <div>
+                    <span>🌡️</span>
+                    <strong>Feels Like</strong>
+                    <p id="feels-like"></p>
+                </div>
+
+            </div>
+
+            <h3>5-Day Forecast</h3>
+
+            <div id="forecast" class="forecast"></div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
